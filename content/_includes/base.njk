@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "Impact City Church" }}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <main class="main{% if main_class %} {{ main_class }}{% endif %}">
+    <div class="topbar">
+      <div class="search-wrap">
+        <input class="site-search" type="text" placeholder="Search the site...">
+        <div class="search-results" aria-live="polite"></div>
+      </div>
+      <a class="app-btn" href="#">Donate</a>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+      <p>© 2026 Josiah. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="/newlogo.png" alt="Apostle Josiah Aubin Logo" class="brand-logo">
+    </div>
+    {% set current = page.url or "/" %}
+    <ul class="menu">
+      <li class="{% if current == '/index.html' %}active{% endif %}"><a href="/index.html">Home</a></li>
+      <li class="{% if current == '/sermons.html' %}active{% endif %}"><a href="/sermons.html">Sermons</a></li>
+      <li class="{% if current == '/teachings.html' %}active{% endif %}"><a href="/teachings.html">Teachings</a></li>
+      <li class="{% if current == '/books.html' %}active{% endif %}"><a href="/books.html">Books</a></li>
+      <li class="{% if current == '/testimonies.html' %}active{% endif %}"><a href="/testimonies.html">Testimonies</a></li>
+      <li class="{% if current == '/live.html' %}active{% endif %}"><a href="/live.html">Live Services</a></li>
+      <li class="{% if current == '/most-watched.html' %}active{% endif %}"><a href="/most-watched.html">Most Watched</a></li>
+    </ul>
+    <a class="download-btn" href="#">Donate</a>
+  </aside>
+</div>
+
+<script src="/search-data.js"></script>
+<script src="/search.js"></script>
+<script src="/topbar.js"></script>
+<script src="/hero-slider.js"></script>
+</body>
+</html>

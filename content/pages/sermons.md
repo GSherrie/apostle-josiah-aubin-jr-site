@@ -1,0 +1,72 @@
+---
+layout: raw.njk
+title: "Sermons"
+permalink: /sermons.html
+main_class: sermon-page
+---
+
+<section class="sermon-ui">
+  <div class="sermon-shell">
+    <div class="sermon-shell-nav">
+      <div class="sermon-shell-brand">
+        <span class="sermon-brand-dot"></span>
+      </div>
+      <nav class="sermon-shell-links">
+        <a class="sermon-pill active" href="/sermons.html">Home</a>
+        <a class="sermon-pill" href="#sermon-library">Sermons</a>
+        <a class="sermon-pill" href="/teachings.html">Teachings</a>
+        <a class="sermon-pill" href="/live.html">Live</a>
+        <a class="sermon-pill" href="/books.html">Books</a>
+      </nav>
+      <a class="sermon-shell-cta" href="#">Donate</a>
+    </div>
+
+    <div class="sermon-hero-grid">
+      <div class="sermon-hero-text">
+        <p class="sermon-hero-eyebrow">Welcome to Impact City Church</p>
+        <h1>Powerful Sermons You Can Trust</h1>
+        <p class="sermon-hero-sub">
+          Discover messages that build faith, strengthen purpose, and equip believers to walk in victory.
+        </p>
+        <div class="sermon-hero-actions">
+          {% set latest = collections.sermons | last %}
+          <a class="play sermon-primary" href="{{ latest.data.youtube }}" target="_blank" rel="noopener">▶ Watch the Latest</a>
+          <a class="ghost-btn sermon-secondary" href="#sermon-library">Browse Library</a>
+        </div>
+        <div class="sermon-hero-meta">
+          <div class="sermon-avatars">
+            <span class="sermon-avatar"></span>
+            <span class="sermon-avatar"></span>
+            <span class="sermon-avatar"></span>
+          </div>
+          <div class="sermon-meta-text">
+            From 5k+ believers • Connected worldwide
+          </div>
+        </div>
+      </div>
+      <div class="sermon-hero-image">
+        {% if latest.data.thumbnail %}
+        <img src="{{ latest.data.thumbnail }}" alt="{{ latest.data.title }}">
+        {% else %}
+        <img src="/hero back.jpg" alt="Sermons from Impact City Church">
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="sermon-latest" id="sermon-library">
+      <div class="sermon-latest-row">
+        {% for item in collections.sermons | reverse %}
+        <a class="sermon-latest-card" href="{{ item.url }}">
+          {% if item.data.thumbnail %}
+          <img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}">
+          {% endif %}
+          <div class="sermon-latest-meta">
+            <h3>{{ item.data.title }}</h3>
+            <p>{{ item.data.category or "Sermon" }} • {{ item.date | year }}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: GSherrie/urban-octo-dollop
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "sermons"
+    label: "Sermons"
+    folder: "content/sermons"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "YouTube", name: "youtube", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "teachings"
+    label: "Teachings"
+    folder: "content/teachings"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "books"
+    label: "Books"
+    folder: "content/books"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Cover", name: "cover", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "testimonies"
+    label: "Testimonies"
+    folder: "content/testimonies"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
