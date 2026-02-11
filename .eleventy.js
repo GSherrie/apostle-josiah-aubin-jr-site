@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("search-data.js");
   eleventyConfig.addPassthroughCopy("hero-slider.js");
   eleventyConfig.addPassthroughCopy("topbar.js");
+  eleventyConfig.addPassthroughCopy("about-slider.js");
+  eleventyConfig.addPassthroughCopy("animations.js");
+  eleventyConfig.addPassthroughCopy("loader.js");
+  eleventyConfig.addPassthroughCopy("slide");
   eleventyConfig.addPassthroughCopy("*.jpg");
   eleventyConfig.addPassthroughCopy("*.png");
 

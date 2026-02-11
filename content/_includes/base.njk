@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<div class="site-loader" aria-hidden="true">
+  <video src="/assets/loader.mp4" muted autoplay playsinline></video>
+</div>
 <div class="app">
   <main class="main{% if main_class %} {{ main_class }}{% endif %}">
     <div class="topbar">
@@ -46,5 +49,8 @@
 <script src="/search.js"></script>
 <script src="/topbar.js"></script>
 <script src="/hero-slider.js"></script>
+<script src="/about-slider.js"></script>
+<script src="/animations.js"></script>
+<script src="/loader.js"></script>
 </body>
 </html>

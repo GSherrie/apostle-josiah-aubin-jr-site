@@ -62,7 +62,7 @@ permalink: /index.html
 <section class="row">
   <div class="about-grid">
     <div class="about-media">
-      <img id="aboutSlide" src="slide1.jpg" alt="Apostle Josiah Aubin Jr.">
+      <img id="aboutSlide" src="/slide/about1.JPEG" alt="Apostle Josiah Aubin Jr.">
     </div>
     <div class="about-text">
       <h2 class="about-title">Apostle Josiah Aubin Jr., PhD</h2>

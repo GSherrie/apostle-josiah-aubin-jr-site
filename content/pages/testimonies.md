@@ -44,7 +44,7 @@ main_class: sermon-page
         </div>
       </div>
       <div class="sermon-hero-image">
-        <img src="/desert.jpeg" alt="Testimony gathering">
+        <img src="/slide/hero5.JPEG" alt="Testimony gathering">
       </div>
     </div>
 
@@ -60,6 +60,8 @@ main_class: sermon-page
         <a class="sermon-latest-card" href="{{ item.url }}">
           {% if item.data.thumbnail %}
           <img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}">
+          {% else %}
+          <img src="/slide/ser7.JPEG" alt="Testimony highlight">
           {% endif %}
           <div class="sermon-latest-meta">
             <h3>{{ item.data.title }}</h3>

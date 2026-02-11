@@ -44,7 +44,7 @@ main_class: sermon-page
         </div>
       </div>
       <div class="sermon-hero-image">
-        <img src="/one.jpg" alt="Teaching session">
+        <img src="/slide/hero1.JPEG" alt="Teaching session">
       </div>
     </div>
 

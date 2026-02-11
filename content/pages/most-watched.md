@@ -44,7 +44,7 @@ main_class: sermon-page
         </div>
       </div>
       <div class="sermon-hero-image">
-        <img src="/hero.jpg" alt="Most watched messages">
+        <img src="/slide/ser6.JPEG" alt="Most watched messages">
       </div>
     </div>
 
