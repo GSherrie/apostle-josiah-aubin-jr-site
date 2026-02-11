@@ -1436,6 +1436,65 @@ body.search-open::before {
     .sermon-shell-nav { flex-direction: column; align-items: flex-start; }
 }
 
+@media (max-width: 900px) {
+    .app {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .brand-logo {
+        max-height: 140px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .menu li {
+        flex: 1 1 calc(50% - 10px);
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .topbar {
+        position: sticky;
+        top: 0;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-wrap {
+        width: 100%;
+    }
+
+    .main {
+        height: auto;
+    }
+
+    .hero {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .hero-slide,
+    .hero-content {
+        padding: 24px 20px;
+    }
+}
+
 @media (max-width: 640px) {
     .modal { padding: 18px; }
     .modal-close { right: 18px; top: 12px; }
